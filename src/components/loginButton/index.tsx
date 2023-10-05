@@ -1,8 +1,9 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button } from "@mui/material";
+import { User } from "../../lib/type";
 
-function LoginButton({ user }) {
+function LoginButton({ user }: { user: User | undefined }) {
   const { loginWithRedirect, logout } = useAuth0();
 
   return (
